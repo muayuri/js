@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando elementos DOM</title>
+    <style>
+        #area{
+            font: normal 18pt Arial;
+            background-color: blue;
+            color: white;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            border-radius: 20px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%)
+        }
+    </style>
+</head>
+<body>
+    <div >
+        interaja...
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        function clicar(){
+            
+            a.innerText = "Clicado"
+            a.style.backgroundColor = 'green'
+            
+        }
+        function entrar(){
+            
+            a.innerText = 'Entrou'
+        }
+        function sair(){
+            a.innerText = 'Saiu'
+            a.style.backgroundColor = 'blue'
+        }
+    </script>
+</body>
+</html>

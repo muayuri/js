@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroporto Brasileiro</title>
+</head>
+<body>
+    <h1>Olá</h1>
+    Informe o país onde nasceu: <input type="text" name="pais" id="pais">
+    <input type="button" value="..." onclick='prossiga()'>
+    <div id="res">
+
+    </div>
+    <script>
+        function prossiga(){
+            var p = window.document.getElementById('pais')
+            var res = window.document.getElementById('res')
+            var p = String(p.value)
+            res.innerHTML = `O país onde nasceu é ${p}?`
+            if (p == 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong>
+                    </p>`
+            }else {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong>
+                    </p>`
+            }
+        }
+        
+    </script>
+</body>
+</html>
